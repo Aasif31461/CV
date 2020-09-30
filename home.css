@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 3rem;
+    background-color: rgb(0, 0, 0);
+}
+
+.parent{
+    font-size: 2rem;
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    justify-content: space-evenly;
+}
+a:link, a:visited{
+    text-decoration: none;
+    color: rgb(68, 61, 61);
+}
+a:hover{
+    text-shadow:5px 10px 12px blanchedalmond;
+}
+.main{
+    display: flex;
+}
+img{
+    animation: movein2 2s;
+    margin-left: 10rem;
+    width: 26rem;
+    height: 20rem;
+}
+.name{
+    animation: movein 2s;
+}
+.name h1{
+    letter-spacing: 1rem;
+    font-size: 9rem;
+    font-family: 'PT Sans', sans-serif;
+    color: #2c3e5036;
+    font-weight: 900;
+    background-image: url(img/water.png);
+    -webkit-background-clip: text;
+    animation: water 15s infinite;
+}
+@keyframes water{
+    0%{
+        background-position: left 0 top 0;
+        
+    }
+    50%{
+        background-position: left 500px top 0;
+    }
+    100%{
+        background-position: left 0 top 0;
+       
+    }
+}
+@keyframes movein{
+    0%{
+        transform: translateX(500px);
+        opacity: 0;
+        
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+       
+    }
+}
+@keyframes movein2{
+    0%{
+        transform: translateX(-500px);
+        opacity: 0;
+      
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@media only screen and (max-width: 700px){
+body{
+    padding: 1rem;
+}
+.parent{
+    font-size: 0.5rem;
+    
+}
+.main{
+    padding-left: 2.5rem;
+}
+.name h1{
+    letter-spacing: 10.2px;
+    margin-top: 3.5rem;
+    font-size: 3rem;
+    margin-left: -2rem;
+    background-image: url(img/watermob.png);
+}
+img{
+    margin-left: -3rem;
+    width: 12rem;
+    height: 10rem;
+}
+}
