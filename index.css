@@ -1,103 +1,270 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-body{
-    padding: 3rem;
-    background-color: rgb(0, 0, 0);
+body {
+  padding: 3rem;
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
 }
 
-.parent{
-    font-size: 2rem;
-    display: flex;
-    font-family: 'Raleway', sans-serif;
-    justify-content: space-evenly;
+.parent {
+  font-size: 2rem;
+  display: flex;
+  font-family: "Raleway", sans-serif;
+  justify-content: space-evenly;
 }
-a:link, a:visited{
-    text-decoration: none;
-    color: rgb(68, 61, 61);
+a:link,
+a:visited {
+  text-decoration: none;
+  color: rgb(68, 61, 61);
 }
-a:hover{
-    text-shadow:5px 10px 12px blanchedalmond;
+a:hover {
+  text-shadow: 5px 10px 12px blanchedalmond;
 }
-.main{
-    display: flex;
+.main {
+  display: flex;
 }
-img{
-    animation: movein2 2s;
-    margin-left: 10rem;
-    width: 26rem;
-    height: 20rem;
+img {
+  animation: movein2 2s;
+  margin-left: 13rem;
+  width: 26rem;
+  height: 20rem;
 }
-.name{
-    animation: movein 2s;
+.name {
+  animation: movein 2s;
+  position: relative;
 }
-.name h1{
-    letter-spacing: 1rem;
-    font-size: 9rem;
-    font-family: 'PT Sans', sans-serif;
-    color: #2c3e5036;
-    font-weight: 900;
-    background-image: url(img/water.png);
-    -webkit-background-clip: text;
-    animation: water 15s infinite;
+.name h1 {
+  letter-spacing: 1rem;
+  font-size: 11rem;
+  font-family: "PT Sans", sans-serif;
+  color: #2c3e5036;
+  font-weight: 900;
+  background-image: url(img/water.png);
+  -webkit-background-clip: text;
+  animation: water 15s infinite;
 }
-@keyframes water{
-    0%{
-        background-position: left 0 top 0;
-        
-    }
-    50%{
-        background-position: left 500px top 0;
-    }
-    100%{
-        background-position: left 0 top 0;
-       
-    }
+
+.first,
+.last {
+  position: absolute;
 }
-@keyframes movein{
-    0%{
-        transform: translateX(500px);
-        opacity: 0;
-        
-    }
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-       
-    }
+
+.first {
+  top: -7rem;
+  left: -13rem;
 }
-@keyframes movein2{
-    0%{
-        transform: translateX(-500px);
-        opacity: 0;
-      
-    }
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-    }
+.last {
+  top: 1rem;
+  left: 1rem;
 }
-@media only screen and (max-width: 700px){
-body{
+
+@keyframes water {
+  0% {
+    background-position: left 0 top 0;
+  }
+  50% {
+    background-position: left 500px top 0;
+  }
+  100% {
+    background-position: left 0 top 0;
+  }
+}
+@keyframes movein {
+  0% {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes movein2 {
+  0% {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  img {
+    margin-left: 0rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
     padding: 1rem;
-}
-.parent{
+  }
+  .parent {
     font-size: 0.5rem;
-    
-}
-.main{
+  }
+  .main {
     padding-left: 2.5rem;
-}
-.name h1{
+  }
+  .name h1 {
     letter-spacing: 10.2px;
     margin-top: 3.5rem;
     font-size: 3rem;
     margin-left: -2rem;
     background-image: url(img/watermob.png);
-}
-img{
+  }
+
+  .first {
+    top: 9rem;
+    left: -9rem;
+  }
+  .last {
+    left: 3rem;
+    top: 12rem;
+  }
+
+  img {
     margin-left: -3rem;
     width: 12rem;
     height: 10rem;
+  }
 }
+
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  .parent {
+    font-size: 0.5rem;
+  }
+  .main {
+    padding-left: 2.5rem;
+  }
+  .name h1 {
+    letter-spacing: 10.2px;
+    margin-top: 3.5rem;
+    font-size: 3rem;
+    margin-left: -2rem;
+    background-image: url(img/watermob.png);
+  }
+
+  .first {
+    top: 9rem;
+    left: -9rem;
+  }
+  .last {
+    left: 3rem;
+    top: 12rem;
+  }
+
+  img {
+    margin-left: -3rem;
+    width: 12rem;
+    height: 10rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  body {
+    padding: 1rem;
+  }
+  .parent {
+    font-size: 0.5rem;
+  }
+  .main {
+    padding-left: 2.5rem;
+  }
+
+  .name h1 {
+    letter-spacing: 10.2px;
+    margin-top: 3.5rem;
+    font-size: 3rem;
+    margin-left: -4rem;
+    background-image: url(img/watermob.png);
+  }
+
+  .first {
+    top: 9rem;
+    left: -8rem;
+  }
+  .last {
+    left: 3rem;
+    top: 12rem;
+  }
+
+  img {
+    margin-left: -2rem;
+    width: 12rem;
+    height: 10rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    padding: 1rem;
+  }
+  .parent {
+    font-size: 0.5rem;
+  }
+  .main {
+    padding-left: 2.5rem;
+  }
+
+  .name h1 {
+    letter-spacing: 10.2px;
+    margin-top: 3.5rem;
+    font-size: 3rem;
+    margin-left: -2rem;
+    background-image: url(img/watermob.png);
+  }
+
+  .first {
+    top: 7rem;
+    left: -9rem;
+  }
+  .last {
+    top: 10rem;
+    left: 0rem;
+  }
+
+  img {
+    margin-left: -2rem;
+    width: 12rem;
+    height: 10rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  body {
+    padding: 1rem;
+  }
+  .parent {
+    font-size: 0.5rem;
+  }
+  .main {
+    padding-left: 2.5rem;
+  }
+
+  .name h1 {
+    letter-spacing: 10.2px;
+    margin-top: 3.5rem;
+    font-size: 3rem;
+    margin-left: -2rem;
+    background-image: url(img/watermob.png);
+  }
+
+  .first {
+    top: 7rem;
+    left: -9rem;
+  }
+  .last {
+    top: 10rem;
+    left: -3rem;
+  }
+
+  img {
+    margin-left: -2rem;
+    width: 12rem;
+    height: 10rem;
+  }
 }
